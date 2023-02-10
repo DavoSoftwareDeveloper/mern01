@@ -1,5 +1,4 @@
 const express = require('express')
-const { get } = require('http')
 const router = express.Router()
 const { getGoals, setGoal, updateGoal, deleteGoal  } = require('../controller/goalController')
 
@@ -11,4 +10,4 @@ router.route('/:id').delete(deleteGoal).put(updateGoal)
 //router.delete('/:id', deleteGoal)
 
 
-module.eports = router
+module.exports = router
