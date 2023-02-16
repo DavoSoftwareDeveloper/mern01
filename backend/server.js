@@ -10,7 +10,11 @@ connectDB()
 const app = express()
 
 app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+
 app.use('/api/v1/goals', require('./routes/goalRoutes') )
+app.use('/api/v1/users', require('./routes/userRoutes') )
+
 app.use(errorHandler)
 
 app.listen(port, () => console.log(`server started on http://localhost:${port}`))
